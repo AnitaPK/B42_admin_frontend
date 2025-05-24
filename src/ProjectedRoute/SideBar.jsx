@@ -46,7 +46,7 @@ const Sidebar = () => {
 
         <li className="mt-4">
         <NavLink
-            to="/dashboard/brand"
+            to="/brand"
             className={({ isActive }) =>
               `nav-link ${isActive ? "text-primary fw-bold" : ""}`
             }

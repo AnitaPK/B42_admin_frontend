@@ -60,5 +60,28 @@ export const getUserInfo = async() =>{
 }
 
 
+// brand API 
+
+export const getAllBrands = async()=>{
+  return await apiRequest("/brand/getAllBrands",{}, "get")
+}
+
+export const addNewBrand = async (payload) =>{
+  return await apiRequest("/brand/create",payload, "post")
+}
+
+export const deleteBrand = async(ID)=>{
+try {
+  return await apiRequest(`/brand/deleteBrand/${ID}`,{}, "delete")
+} catch (error) {
+  if(error){
+    throw error
+  }
+}
+
+
+
+}
+
 
 export default axiosInstance;
